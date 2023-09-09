@@ -8,14 +8,23 @@ public class MergingArrays {
         System.out.println("[RESULT TASK 2]:");
         int [] mass1 = new int[]{3, 4, 5, 6, 7};
         int [] mass2 = new int[]{1, 2, 8, 9, 10};
-        //int [] mass = getMassVariant1(mass1, mass2);
-        int [] mass = getMassVariant2(mass1, mass2);
-        IntStream.of(mass).forEach(el -> System.out.print(" " + el));
-        System.out.println();
+        //mass = getMassVariant2(mass1, mass2);
+        print("Mass2: ", getMassVariant2(mass1, mass2));
+        print("Mass3: ", getMassVariant3(mass1, mass2));
     }
 
+    public static int [] getMassVariant4(int[] mass1, int[] mass2) {
+        return IntStream.concat(Arrays.stream(mass1), Arrays.stream(mass2)).sorted().toArray();
+    }
+
+    public static int [] getMassVariant3(int[] mass1, int[] mass2) {
+        return IntStream.concat(
+                Arrays.stream(mass1),
+                Arrays.stream(mass2)
+        ).sorted().toArray();
+    }
     public static int [] getMassVariant2(int [] mass1, int [] mass2) {
-        return IntStream.concat(Arrays.stream(mass1), Arrays.stream(mass1))
+        return IntStream.concat(Arrays.stream(mass1), Arrays.stream(mass2))
                 .sorted()
                 .toArray();
     }
@@ -31,5 +40,11 @@ public class MergingArrays {
             }
         }
         return massNew;
+    }
+
+    public static void print(String nameMass, int [] mass) {
+        System.out.print(nameMass);
+        IntStream.of(mass).forEach(el -> System.out.print(" " + el));
+        System.out.println();
     }
 }

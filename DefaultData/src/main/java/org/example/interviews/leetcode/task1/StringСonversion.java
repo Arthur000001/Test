@@ -10,6 +10,17 @@ public class StringСonversion {
         System.out.println("[RESULT TASK 1]:");
         System.out.println(variant1(INPUT_STRING));
         System.out.println(variant2(INPUT_STRING));
+        System.out.println(variant3("FIWBEIVOWEBFVBWEYRBCWJDEHVITW3VRUJHWETIRCVWHDEBVIUWRBDVEEXHBJNCIWEB"));
+    }
+
+    public static String variant3(String inputString) {
+        return inputString.chars()
+                .mapToObj(el -> (char)el)
+                .collect(Collectors.toMap(k -> k, v -> 1, Integer::sum))
+                .entrySet()
+                .stream()
+                .map(el -> "(" + el.getKey() + "=" + el.getValue().toString() + ")")
+                .collect(Collectors.joining(" "));
     }
 
     public static String variant2(String inputString) {
