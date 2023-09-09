@@ -1,18 +1,17 @@
 package org.example.interviews.leetcode.task2;
 
 import java.util.Arrays;
-import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 public class MergingArrays {
     public static void start() {
-
+        System.out.println("[RESULT TASK 2]:");
         int [] mass1 = new int[]{3, 4, 5, 6, 7};
         int [] mass2 = new int[]{1, 2, 8, 9, 10};
         //int [] mass = getMassVariant1(mass1, mass2);
         int [] mass = getMassVariant2(mass1, mass2);
         IntStream.of(mass).forEach(el -> System.out.print(" " + el));
+        System.out.println();
     }
 
     public static int [] getMassVariant2(int [] mass1, int [] mass2) {

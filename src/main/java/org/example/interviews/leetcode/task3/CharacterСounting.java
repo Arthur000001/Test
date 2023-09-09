@@ -1,11 +1,11 @@
 package org.example.interviews.leetcode.task3;
 
-import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class CharacterСounting {
 
     public static void start() {
+        System.out.println("[RESULT TASK 3]:");
         String seq = "ABBBCDDDBB";
         System.out.println(variant1(seq));
         System.out.println(variant2(seq));

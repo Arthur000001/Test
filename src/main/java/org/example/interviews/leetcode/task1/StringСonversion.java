@@ -2,12 +2,12 @@ package org.example.interviews.leetcode.task1;
 
 import java.util.Map;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class StringСonversion {
     private static final String INPUT_STRING = "EJKRIPGBWIECBEIRGBWKEJRBGIWII";
 
     public static void start() {
+        System.out.println("[RESULT TASK 1]:");
         System.out.println(variant1(INPUT_STRING));
         System.out.println(variant2(INPUT_STRING));
     }
