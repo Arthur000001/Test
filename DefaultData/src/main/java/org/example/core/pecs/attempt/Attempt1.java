@@ -2,6 +2,7 @@ package org.example.core.pecs.attempt;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Attempt1 {
     /**
@@ -10,20 +11,24 @@ public class Attempt1 {
      * но не допускает чтение элементов с уверенностью в их типе.
      * */
     public static void start() {
-        producerExtends();
-        consumerSuper();
+        List<Integer> list = new ArrayList<>();
+        consumerSuper(list);
+        producerExtends(list);
+        System.out.println(list.stream()
+                .map(el -> Integer.toString(el))
+                .collect(Collectors.joining(",")));
     }
     /**
      * List<? extends Number>:
      * Можно брать элементы из списка, но неизвестно, точно какого типа эти элементы.
      * Например, вы можете делать следующее:
      * */
-    public static void producerExtends() {
-        List<? extends Number> numbers = new ArrayList<>();
-        Number number = numbers.get(0); // Можно получать элементы
+    public static void producerExtends(List<? extends Number> numbers) {
+        // Можно получать элементы
+        Number number = numbers.get(0);
         // Однако, нельзя добавлять элементы в такой список, так как компилятор не знает точного типа элементов
         // и не может гарантировать их безопасность:
-        numbers.add(42); // Ошибка компиляции
+        // numbers.add(60); // Ошибка компиляции
     }
     /**
      * List<? super Integer>:
@@ -31,10 +36,15 @@ public class Attempt1 {
      * Можно брать элементы из списка, но они будут рассматриваться как объекты типа Object.
      * Например, вы можете делать следующее:
      * */
-    public static void consumerSuper() {
-        List<? super Integer> integers = new ArrayList<>();
-        integers.add(42); // Можно добавлять элементы типа Integer и его подклассов
-        Object obj = integers.get(0); // Полученный элемент рассматривается как Object
+    public static void consumerSuper(List<? super Integer> integers) {
+        // Можно добавлять элементы типа Integer и его подклассов
+        integers.add(10);
+        integers.add(20);
+        integers.add(30);
+        integers.add(40);
+        integers.add(50);
+        // Полученный элемент рассматривается как Object
+        Object obj = integers.get(0);
         // Если вы попытаетесь получить элемент как Integer, вам придется выполнить явное приведение типов:
         Integer integer = (Integer) integers.get(0);
     }
