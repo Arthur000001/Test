@@ -53,12 +53,6 @@ class LinkNode implements Cloneable {
     @Override
     protected Object clone() throws CloneNotSupportedException {
         LinkNode clonedObject = (LinkNode) super.clone();
-
-        // Здесь можно выполнить копирование всех полей, которые требуют копирования
-        // Например:
-        // clonedObject.field1 = this.field1;
-        // clonedObject.field2 = this.field2;
-
         return clonedObject;
     }
 }
