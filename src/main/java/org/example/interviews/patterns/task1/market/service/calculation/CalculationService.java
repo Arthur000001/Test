@@ -1,6 +1,6 @@
 package org.example.interviews.patterns.task1.market.service.calculation;
 
-import crm.market.model.Rental;
+import org.example.interviews.patterns.task1.market.model.Rental;
 
 import java.util.List;
 

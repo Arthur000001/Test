@@ -1,6 +1,6 @@
 package org.example.interviews.patterns.task1.market.service.calculation.impl;
 
-import crm.market.model.Rental;
+import org.example.interviews.patterns.task1.market.model.Rental;
 import org.example.interviews.patterns.task1.market.service.calculation.CalculationService;
 import org.example.interviews.patterns.task1.market.service.calculation.helper.SettlementBase;
 

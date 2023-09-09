@@ -1,14 +1,15 @@
 package org.example.interviews.patterns.task1.market.facade.impl;
 
+
+import org.example.interviews.patterns.task1.market.facade.FacadeMove;
+import org.example.interviews.patterns.task1.market.model.Customer;
+import org.example.interviews.patterns.task1.market.model.GroupRentals;
+import org.example.interviews.patterns.task1.market.model.Rental;
 import org.example.interviews.patterns.task1.market.service.calculation.CalculationService;
 import org.example.interviews.patterns.task1.market.service.calculation.impl.CalculationServiceLoyaltlyPointImpl;
 import org.example.interviews.patterns.task1.market.service.calculation.impl.CalculationServicePriceRentalImpl;
 import org.example.interviews.patterns.task1.market.service.print.PrintService;
 import org.example.interviews.patterns.task1.market.service.print.impl.PrintServiceCheckImpl;
-import org.example.interviews.patterns.task1.market.facade.FacadeMove;
-import crm.market.model.Customer;
-import crm.market.model.GroupRentals;
-import crm.market.model.Rental;
 
 import java.util.List;
 
