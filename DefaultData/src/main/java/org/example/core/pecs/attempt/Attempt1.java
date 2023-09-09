@@ -2,6 +2,7 @@ package org.example.core.pecs.attempt;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class Attempt1 {
@@ -29,6 +30,7 @@ public class Attempt1 {
         // Однако, нельзя добавлять элементы в такой список, так как компилятор не знает точного типа элементов
         // и не может гарантировать их безопасность:
         // numbers.add(70); // Ошибка компиляции
+        System.out.println("producerExtends: " + number.toString());
     }
     /**
      * List<? super Integer>:
@@ -43,6 +45,7 @@ public class Attempt1 {
         Object obj = integers.get(0);
         // Если вы попытаетесь получить элемент как Integer, вам придется выполнить явное приведение типов:
         Integer integer = (Integer) integers.get(0);
+        System.out.println("consumerSuper: " + integer.toString());
     }
     /**
      *     Используйте List<? extends T> и List<? super T> в зависимости от вашего намерения с контейнером.
