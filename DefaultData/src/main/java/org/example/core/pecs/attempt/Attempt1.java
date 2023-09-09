@@ -28,7 +28,7 @@ public class Attempt1 {
         Number number = numbers.get(0);
         // Однако, нельзя добавлять элементы в такой список, так как компилятор не знает точного типа элементов
         // и не может гарантировать их безопасность:
-        // numbers.add(60); // Ошибка компиляции
+        // numbers.add(70); // Ошибка компиляции
     }
     /**
      * List<? super Integer>:
@@ -38,11 +38,7 @@ public class Attempt1 {
      * */
     public static void consumerSuper(List<? super Integer> integers) {
         // Можно добавлять элементы типа Integer и его подклассов
-        integers.add(10);
-        integers.add(20);
-        integers.add(30);
-        integers.add(40);
-        integers.add(50);
+        integers.add(10);integers.add(20);integers.add(30);integers.add(40);integers.add(50);integers.add(60);
         // Полученный элемент рассматривается как Object
         Object obj = integers.get(0);
         // Если вы попытаетесь получить элемент как Integer, вам придется выполнить явное приведение типов:
