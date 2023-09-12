@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>Integration</module>
-        <module>DefaultData</module>
+        <module>ProjectOne</module>
+        <module>Default</module>
     </modules>
 
     <properties>

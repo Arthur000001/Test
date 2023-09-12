@@ -7,8 +7,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="DefaultData" />
-        <module name="Integration" />
+        <module name="Default" />
+        <module name="ProjectOne" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
