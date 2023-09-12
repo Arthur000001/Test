@@ -1,0 +1,14 @@
+-- Выбрать все профили, у которых больше 1000 подписчиков
+
+select * from profile p
+join subscription_count sc
+on p.id = sc.profile_id
+where sc.followers_count > 1000;
+
+-- Выбрать все профили, у которых больше 10 постов
+
+select profile.nickname, COUNT(post.owner_id) AS QuantityPost from profile
+join post
+on post.id = post.owner_id
+GROUP BY profile.nickname
+HAVING COUNT(owner_id) > 5;

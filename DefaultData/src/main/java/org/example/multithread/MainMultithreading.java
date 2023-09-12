@@ -7,6 +7,7 @@ import org.example.multithread.exemple.Phaser.PhaserExampleV2;
 import org.example.multithread.exemple.Reactor.ReactorJustExemple;
 import org.example.multithread.exemple.TwoWayCommunicationV1.TwoWayCommunication1;
 import org.example.multithread.exemple.TwoWayCommunicationV2.TwoWayCommunication2;
+import org.example.multithread.exemple.countdownlatch.MultiThreadedExample;
 
 import java.util.concurrent.ExecutionException;
 
@@ -21,6 +22,7 @@ public class MainMultithreading {
         //PhaserExampleV2.start();
         //LockConditionExample.start();
         //ArrayBlockingQueueExample.start();
-        ReactorJustExemple.start();
+        //ReactorJustExemple.start();
+        MultiThreadedExample.start();
     }
 }

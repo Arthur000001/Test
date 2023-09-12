@@ -24,7 +24,8 @@ public class MergingArrays {
         ).sorted().toArray();
     }
     public static int [] getMassVariant2(int [] mass1, int [] mass2) {
-        return IntStream.concat(Arrays.stream(mass1), Arrays.stream(mass2))
+        return IntStream
+                .concat(Arrays.stream(mass1), Arrays.stream(mass2))
                 .sorted()
                 .toArray();
     }

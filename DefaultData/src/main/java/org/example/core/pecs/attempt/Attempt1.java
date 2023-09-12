@@ -2,7 +2,6 @@ package org.example.core.pecs.attempt;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class Attempt1 {
@@ -29,7 +28,7 @@ public class Attempt1 {
         Number number = numbers.get(0);
         // Однако, нельзя добавлять элементы в такой список, так как компилятор не знает точного типа элементов
         // и не может гарантировать их безопасность:
-        // numbers.add(70); // Ошибка компиляции
+        // numbers.add(1); // Ошибка компиляции
         System.out.println("producerExtends: " + number.toString());
     }
     /**
