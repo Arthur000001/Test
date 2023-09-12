@@ -1,4 +1,4 @@
-package org.example.interviews.leetcode.task4;
+package org.example.interviews.coreknowledge.task4;
 
 import lombok.Getter;
 import lombok.Setter;

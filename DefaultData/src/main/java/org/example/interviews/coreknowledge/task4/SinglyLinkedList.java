@@ -1,4 +1,4 @@
-package org.example.interviews.leetcode.task4;
+package org.example.interviews.coreknowledge.task4;
 
 public class SinglyLinkedList {
     public static void start() {

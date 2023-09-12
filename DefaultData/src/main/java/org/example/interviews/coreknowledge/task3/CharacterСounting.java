@@ -1,4 +1,4 @@
-package org.example.interviews.leetcode.task3;
+package org.example.interviews.coreknowledge.task3;
 
 import java.util.stream.Collectors;
 

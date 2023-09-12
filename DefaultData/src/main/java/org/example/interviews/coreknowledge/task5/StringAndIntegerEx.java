@@ -1,4 +1,4 @@
-package org.example.interviews.leetcode.task5;
+package org.example.interviews.coreknowledge.task5;
 
 public class StringAndIntegerEx {
     public static void start() {

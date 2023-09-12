@@ -1,4 +1,4 @@
-package org.example.interviews.leetcode.task2;
+package org.example.interviews.coreknowledge.task2;
 
 import java.util.Arrays;
 import java.util.stream.IntStream;
